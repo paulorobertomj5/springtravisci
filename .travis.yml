@@ -10,7 +10,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker push paulormoj/restspringboot;
+    docker push paulormoj/rest-spring-boot;
     docker push paulormoj/mysql;
   on:
     branch: master

@@ -35,7 +35,7 @@ public class PersonController {
 
     @GetMapping(value = "/teste")
     public ResponseEntity<Object> teste(){
-        return ResponseEntity.status(HttpStatus.OK).body("\"Teste Traves CI\"");
+        return ResponseEntity.status(HttpStatus.OK).body("\"Teste Traves CI 2\"");
 
     }
 }
