@@ -8,6 +8,11 @@ spript:
 before_deploy:
   - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
 deploy:
-  provider:script
+  provider: script
   script:
-    docker push paulormoj/restspringboot;paulormoj/mysql;
+    docker push paulormoj/restspringboot;
+    docker push paulormoj/mysql;
+  on:
+    branch: master
+notifications:
+  email: false
