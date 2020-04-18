@@ -1,6 +1,6 @@
 package br.com.spring.restspringboot.api.service.impl;
 
-import br.com.spring.restspringboot.api.dao.PersonDAO;
+import br.com.spring.restspringboot.api.repository.PersonDAO;
 import br.com.spring.restspringboot.api.entity.PersonResponseEntity;
 import br.com.spring.restspringboot.api.model.PersonModel;
 import br.com.spring.restspringboot.api.service.PersonService;
@@ -8,7 +8,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 

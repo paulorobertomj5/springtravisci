@@ -1,6 +1,5 @@
 package br.com.spring.restspringboot.api.db;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,12 +20,11 @@ public class DataSourceApplication {
 
     private DataSource createPostgreSQLDataSource() {
 
-
         DataSource dataSource = DataSourceBuilder.create()
-                .url("jdbc:mysql://db:3306/test")
+                .url("jdbc:mysql://localhost:3306/test?useTimeZone=true&serverTimezone=UTC&useSSL=false")
                 .driverClassName(DRIVER_CLASS)
-                .username("user")
-                .password("password")
+                .username("root")
+                .password("admin")
                 .build();
         return dataSource;
     }

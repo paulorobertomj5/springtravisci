@@ -1,4 +1,4 @@
-package br.com.spring.restspringboot.api.dao;
+package br.com.spring.restspringboot.api.repository;
 
 import br.com.spring.restspringboot.api.model.PersonModel;
 

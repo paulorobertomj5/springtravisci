@@ -1,4 +1,4 @@
-package br.com.spring.restspringboot.api.dao.mapper;
+package br.com.spring.restspringboot.api.repository.mapper;
 
 import br.com.spring.restspringboot.api.model.PersonModel;
 import org.springframework.jdbc.core.RowMapper;
