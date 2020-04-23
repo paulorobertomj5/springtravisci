@@ -1,4 +1,4 @@
-package br.com.spring.restspringboot.api.entity;
+package br.com.spring.restspringboot.api.entity.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

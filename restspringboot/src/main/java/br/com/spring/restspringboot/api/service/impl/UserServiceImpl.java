@@ -1,6 +1,6 @@
 package br.com.spring.restspringboot.api.service.impl;
 
-import br.com.spring.restspringboot.api.entity.UserEntity;
+import br.com.spring.restspringboot.api.entity.response.UserResponse;
 import br.com.spring.restspringboot.api.model.UserModel;
 import br.com.spring.restspringboot.api.repository.UserDAO;
 import br.com.spring.restspringboot.api.service.UserService;
@@ -18,17 +18,17 @@ public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
 
     @Override
-    public List<UserEntity> getUsers() {
-        List<UserModel> userModelList =  userDAO.getUsers();
-        if(userModelList != null && !userModelList.isEmpty()){
-            List<UserEntity> response = new ArrayList<>();
+    public List<UserResponse> getUsers() {
+        List<UserModel> userModelList = userDAO.getUsers();
+        if (userModelList != null && !userModelList.isEmpty()) {
+            List<UserResponse> response = new ArrayList<>();
 
             userModelList.forEach(
-                model -> {
-                    UserEntity userEntity = new UserEntity();
-                    BeanUtils.copyProperties(model, userEntity);
-                    response.add(userEntity);
-                }
+                    model -> {
+                        UserResponse userEntity = new UserResponse();
+                        BeanUtils.copyProperties(model, userEntity);
+                        response.add(userEntity);
+                    }
             );
             return response;
         }

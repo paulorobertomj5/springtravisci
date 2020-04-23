@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class PersonModel {
-    private Integer id;
+public class ClientModel {
+    private Integer key;
     private String name;
 }
